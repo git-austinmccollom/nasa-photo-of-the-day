@@ -9,7 +9,6 @@ function App() {
   const BASE_URL = 'https://api.nasa.gov/planetary/apod?api_key=1nZRJTT4osWq35OiAIXOHJsMaxERpf42eUdEu52d';
   // const HD_QUERY_PARAMETER = '&hd=True'; - May not need that, hdurl is always included in response.data
   const TODAY = date.format(new Date(), 'YYYY-M-D');
-  console.log(TODAY);
 
   useEffect( () => {
     axios.get(`${BASE_URL}&date=${TODAY}`)
@@ -20,8 +19,7 @@ function App() {
       debugger
     })
   }, [])
-  console.log(post);
-  console.log(post.title);
+
   return (
     <div className="App">
       <Post post={post}/>
