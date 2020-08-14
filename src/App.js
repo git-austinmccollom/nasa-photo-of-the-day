@@ -51,7 +51,7 @@ function App() {
             value={inputDate}
             onChange={handleInputDateChange}
           />
-          <input type="submit" value="Search"/>
+          <input class="submitButton" type="submit" value="Search"/>
         </form>
       </div>
       <Post post={post}/>
